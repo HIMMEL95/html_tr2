@@ -36,7 +36,7 @@
 				<th>V 아이디</th>
 				<td>
 					<input type="text" name="id" id="id">
-					<input type="button" id="btnCheck" value="아이디중복확인" style="width:120px"><br>
+					<input type="button" id="btnCheck" value="아이디중복확인" style="width:120px" onclick=here()><br>
 					<font color="#2eb78d" size="2">
 						<img alt="말풍선" src="../image/talk.png" width="13px" align="center">
 						6~16자까지 영문자(소문자), 숫자 사용 가능합니다.
@@ -80,9 +80,9 @@
 						<option value="google"> google.com
 						<option value="daum"> daum.net
 					</select>
-					<input type="button" name="codeNumber" id="codenumber" value="v 인증코드 발송"><br>
+					<input type="button" name="codeNumber" id="codenumber" value="v 인증코드 발송" onclick=here1()><br>
 					<input type="text" name="numberCode" id="numberCode">
-					<input type="button" name="confirmBtn" id="confirmBtn" value="v 인증 확인">			
+					<input type="button" name="confirmBtn" id="confirmBtn" value="v 인증 확인" onclick=here2()>			
 				</td>
 			</tr>
 			<tr>
@@ -279,8 +279,20 @@
 	</form>
 	<script type="text/javascript">
 		function here() {
-			alert("전송 되었습니다.");
-			document.getElementById("id").submit();
+			alert(document.getElementById("id").value + "는 사용가능한 아이디 입니다.");
+			document.getElementById("btnCheck").submit();
+		}
+	</script>
+	<script type="text/javascript">
+		function here1() {
+			alert("인증 코드를 발송하였습니다.");
+			document.getElementById("codeNumber").submit();
+		}
+	</script>
+	<script type="text/javascript">
+		function here2() {
+			alert("인증 코드가 확인되었습니다.");
+			document.getElementById("confirmBtn").submit();
 		}
 	</script>
 </body>
