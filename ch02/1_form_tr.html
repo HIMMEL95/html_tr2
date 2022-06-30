@@ -73,12 +73,12 @@
 				<td style="line-height:30px">
 					<input type="text" name="email" id="email">
 					<font>@</font>
-					<input type="text" name="domain" id="domain">
-					<select>
+					<input type="text" name="domain" id="domain" value="">
+					<select id="selectEmail" onclick=here3()>
 						<option value=""> 메일주소선택
-						<option value="naver"> naver.com
-						<option value="google"> google.com
-						<option value="daum"> daum.net
+						<option value="naver.com"> naver.com
+						<option value="google.com"> google.com
+						<option value="daum.net"> daum.net
 					</select>
 					<input type="button" name="codeNumber" id="codenumber" value="v 인증코드 발송" onclick=here1()><br>
 					<input type="text" name="numberCode" id="numberCode">
@@ -293,6 +293,12 @@
 		function here2() {
 			alert("인증 코드가 확인되었습니다.");
 			document.getElementById("confirmBtn").submit();
+		}
+	</script>
+	<script type="text/javascript">
+		function here3() {
+			const domain = document.getElementById("selectEmail").value;
+			document.getElementById("domain").value = domain;
 		}
 	</script>
 </body>
