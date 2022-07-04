@@ -3,11 +3,249 @@
 <head>
 	<meta charset="uTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Table</title>
+	<title>입사지원서</title>
+	<style type="text/css">
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
+		th, td {
+			padding: 5px;
+			font-size: small;
+		}
+	</style>
 </head>
 
 <body>
+	<form method="get" action="recruitFormhtml" id="form">
+		<h1 align="center">입사지원서</h1>
+		<table width="100%">
+			<tr>
+				<th width="100px" align="center" bgcolor="#33d3ff">지원분야</th>
+				<td width="100px" align="center">
+					<input type="text" id="appField" name="appField">
+				</td>
+				<th width="100px" align="center" bgcolor="#33d3ff">경력구분</th>
+				<td width="100px" align="center">
+					<input type="text" id="career" name="career">
+				</td>
+				<th width="100px" align="center" bgcolor="#33d3ff">희망연봉</th>
+				<td width="100px" align="center">
+					<input type="text" id="pay" name="pay">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<h4><font size=3>□ 기본정보</font></h4>
+		<table width="100%">
+			<tr>
+				<td width="140px" align="center" rowspan="6">
+					<em>
+						<font size="3" color="red">
+							정장차림의 증명사진
+							<br>넣으시면
+							<br>됩니다.단축키
+							<br>ctrl+N+I
+						</font>
+					</em>
+				</td>
+				<th width="70px" align="center" bgcolor="#33d3ff">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
+				<td width="200px">
+					<input type="text" id="name" name="name">
+				</td>
+				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
+				<td width="300px">
+					<input type="text" name="chiName">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th align="center" bgcolor="#33d3ff">영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
+				<td>
+					<input type="text" id="enName" name="enName">
+				</td>
+				<th align="center" bgcolor="#33d3ff">생년월일</th>
+				<td>
+					<input type="text" id="birth" name="birth" placeholder="1999.01.01">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th align="center" bgcolor="#33d3ff">전화번호</th>
+				<td>
+					<input type="text" id="tel1" name="tel1" placeholder="010-1234-5678">
+				</td>
+				<th align="center" bgcolor="#33d3ff">비상연락망</th>
+				<td>
+					<input type="text" name="tel2" placeholder="010-1234-5678">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th align="center" bgcolor="#33d3ff">전자우편</th>
+				<td>
+					<input type="text" id="email" name="email">
+				</td>
+				<th align="center" bgcolor="#33d3ff">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이</th>
+				<td>
+					<input type="text" name="age">
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th align="center" bgcolor="#33d3ff">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
+				<td colspan="3">
+					<input type="text" id="address" name="address">
+				</td>
+				<!-- <td align="center" bgcolor="#33d3ff"></td>
+				<td></td> -->
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th align="center" bgcolor="#33d3ff">취미생활</th>
+				<td colspan="3">
+					<input type="text" id="hobby" name="hobby" value="선택사항" style="color: #0dc455;"> 
+				</td>
+				<!-- <td align="center" bgcolor="#33d3ff"></td>
+				<td></td> -->
+			</tr>
+		</table>
+		<br>
+		<h4><font size=3>□ 학력사항 (최신이력이 가장 위로)</font></h4>
+		<div style="float: right; margin: 5px;">
+			<input type="button" value="추가" onclick=addRow()>
+			<input type="button" value="삭제" onclick=removeRow()>
+		</div>
+		<table width="100%" id="careerTable">
+			<thead id="careerThead">
+				<tr>
+					<th width="50px" align="center" bgcolor="#33d3ff">기간</th>
+					<th width="100px" align="center" bgcolor="#33d3ff">출신학교</th>
+					<th width="30px" align="center" bgcolor="#33d3ff">구분</th>
+					<th width="70px" align="center" bgcolor="#33d3ff">학과</th>
+					<th width="30px" align="center" bgcolor="#33d3ff">소재지</th>
+				</tr>
+			</thead>
+			<tbody id="careerList">
+				<tr>
+					<td align="center">
+						<input type="date" name="start">
+						<font color="#0dc455" style="font-size: medium;">~</font>
+						<input type="date" name="end">
+					</td>
+					<td align="center">
+						<input type="text" name="collage" placeholder="OO대학교" style="color: #0dc455;">
+					</td>
+					<td align="center">
+						<select id="selectEmail">
+							<option value=""> 선택
+							<option value="졸업"> 졸업
+							<option value="재학"> 재학
+							<option value="고졸"> 고졸
+							<option value="중퇴"> 중퇴
+						</select>
+					</td>
+					<td align="center">
+						<input type="text" id="major" name="major">
+					</td>
+					<td align="center">
+						<input type="text" name="location">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<h4><font size=3>□ 교육연수</font></h4>
+		<table width="100%">
+			<thead>
+				<tr>
+					<th width="50px" align="center" bgcolor="#33d3ff">연수기간</th>
+					<th width="120px" align="center" bgcolor="#33d3ff">연수기관</th>
+					<th width="350px" align="center" bgcolor="#33d3ff">연수과정 및 내용</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr height="100">
+					<td align="center">
+						<input type="date" name="start">
+						<font color="#0dc455" style="font-size: medium;">~</font>
+						<input type="date" name="end">
+					</td>
+					<td align="center">
+						<input type="text" name="start" style="color: #0dc455;" value="(주)이젠 아카데미">
+					</td>
+					<td align="center">
+						<textarea rows="10px" cols="70px" name="contents"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<h4><font size=3>□ 자격사항</font></h4>
+		<div style="float: right; margin: 5px;">
+			<input type="button" value="추가">
+			<input type="button" value="삭제">
+		</div>
+		<table width="100%">
+			<thead>
+				<tr>
+					<th width="50px" align="center" bgcolor="#33d3ff">취득일</th>
+					<th width="50px" align="center" bgcolor="#33d3ff">종류 및 등급</th>
+					<th width="50px" align="center" bgcolor="#33d3ff">발행처</th>
+					<th width="100px" align="center" bgcolor="#33d3ff">보유기술 및 수준</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr height="50">
+					<td align="center">
+						<input type="date" name="acquisitionDate">
+					</td>
+					<td align="center"><input type="text" name="grade"></td>
+					<td align="center"><input type="text" name="organ"></td>
+					<td align="center"><input type="text" name="level"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<h4><font size=3>□ 경력사항(4대 보험 가입 경력)</font></h4>
+		<div style="float: right; margin: 5px;">
+			<input type="button" value="추가">
+			<input type="button" value="삭제">
+		</div>
+		<table width="100%">
+			<thead>
+				<tr>
+					<th width="100px" align="center" bgcolor="#33d3ff">활동기간</th>
+					<th width="50px" align="center" bgcolor="#33d3ff">기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;관</th>
+					<th width="50px" align="center" bgcolor="#33d3ff">담당업무</th>
+					<th width="300px" align="center" bgcolor="#33d3ff">경험 및 습득역량</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr height="20">
+					<td align="center">
+						<input type="date" name="start">
+						<font color="#0dc455" style="font-size: medium;">~</font>
+						<input type="date" name="end">
+					</td>
+					<td align="center"><input type="text" name="grade"></td>
+					<td align="center"><input type="text" name="company"></td>
+					<td align="center"><input type="text" name="experience"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<a href="./recruitList.html" style="float: left;">
+			<img src="./image/cancle.PNG" alt="취소">
+		</a>
+		<!-- <input type="button" value="취소" style="width: 70px; height: 30px; vertical-align: middle;"> -->
+		<a href="./recruitView.html" style="float: right;">
+			<img src="./image/regist.PNG" alt="등록">
+		</a>
+	</form>
+	<script type="text/javascript">
 
-	
+	</script>
 </body>
 </html>

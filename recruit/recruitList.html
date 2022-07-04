@@ -3,11 +3,74 @@
 <head>
 	<meta charset="uTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Table</title>
+	<title>회원 가입 정보</title>
+	<link href="./css/listStyle.css" rel="stylesheet" type="text/css"> 
 </head>
 
 <body>
-
-	
+	<form method="get" action="./result.html" id="form">
+		<div>
+			<h2> | 회원 리스트 |</h2>
+			<p>사이트 운영 > 회원 관리 > 회원 리스트</p>
+		</div>
+		<div>
+			<input type="text" id="input" placeholder="검색어 입력" style="width: 90%; height: 20px; vertical-align: middle;">
+			<input type="button" value="검색" id="search" style="vertical-align: middle; width: 50px; height: 30px;" onclick=searching()>
+		</div>
+		<br>
+		<div>
+			<table width="100%">
+				<tr>
+					<th width="10px;">
+						<input type="button" id="selectAll" style="height: 15px; vertical-align: middle;">
+					</th>
+					<th width="30px">번호</th>
+					<th width="70px">이름</th>
+					<th width="70px">영문이름</th>
+					<th width="80px">생년월일</th>
+					<th width="100px">전자우편</th>
+					<th width="100px">전화번호</th>
+					<th>주소</th>
+					<th width="180px">지원분야</th>
+					<th width="40px">경력</th>
+					<th width="80px">희망연봉</th>
+					<th width="120px">전공</th>
+					<th width="60px">취미</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="button" id="select1" style="height: 15px; vertical-align: middle;">
+					</td>
+					<td>1</td>
+					<td>이하늘</td>
+					<td>Lee Hanuel</td>
+					<td>1995.10.08</td>
+					<td>bbluesky7738@gmail.com</td>
+					<td>010-1234-5678</td>
+					<td>경기도 용인시 기흥구</td>
+					<td>[IT] 차량 데이터 기반 모빌리티 서비스 개발</td>
+					<td>신입</td>
+					<td>3,000만원</td>
+					<td>정보통신공학과</td>
+					<td>축구</td>
+				</tr>
+			</table>
+			<br>
+			<a href="./recruitRegForm.html" style="float: right;">
+				<img src="./image/regist.PNG" alt="등록">
+			</a>
+		</div>
+	</form>
+	<script type="text/javascript">
+		function searching() {
+			const sear = document.getElementById("input").value;
+			alert(sear + "는 검색 가능합니다.")
+			document.getElementById("search").submit();
+		}
+		function regist() {
+			alert(document.getElementById("id").value + "는 사용가능한 아이디 입니다.");
+			document.getElementById("btnCheck").submit();
+		}
+	</script>
 </body>
 </html>
