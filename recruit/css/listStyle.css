@@ -17,3 +17,15 @@ td {
 th {
   background-color: #32bcef;
 }
+
+#input {
+	border: solid;
+	border-width: 2px;
+	border-color: #47bba5;
+	border-radius: 15px;
+}
+
+#search {
+	background-color: #a7c7c1;
+	border-radius: 10px;
+}
