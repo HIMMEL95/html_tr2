@@ -14,6 +14,31 @@
 			padding: 5px;
 			font-size: small;
 		}
+
+		.filebox label {
+			display: inline-block;
+			padding: .5em .75em;
+			color: white;
+			font-size: inherit;
+			line-height: normal;
+			vertical-align: middle;
+			background-color: #c1d6b0;
+			cursor: pointer;
+			border: 1px solid #ebebeb;
+			border-bottom-color: #e2e2e2;
+			border-radius: .25em;
+		}
+
+		.filebox input[type="file"] {  /* 파일 필드 숨기기 */
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip:rect(0,0,0,0);
+			border: 0;
+		}
 	</style>
 </head>
 
@@ -49,6 +74,11 @@
 							<br>ctrl+N+I
 						</font>
 					</em>
+					<br>
+					<div class="filebox">
+						<label for="ex_file">업로드</label>
+						<input type="file" id="ex_file">
+					</div>
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
 				<td width="200px">
@@ -105,7 +135,7 @@
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">취미생활</th>
 				<td colspan="3">
-					<input type="text" id="hobby" name="hobby" value="선택사항" style="color: #0dc455;"> 
+					<input type="text" id="hobby" name="hobby" placeholder="선택사항"> 
 				</td>
 				<!-- <td align="center" bgcolor="#33d3ff"></td>
 				<td></td> -->
@@ -135,7 +165,7 @@
 						<input type="date" name="end">
 					</td>
 					<td align="center">
-						<input type="text" name="collage" placeholder="OO대학교" style="color: #0dc455;">
+						<input type="text" name="collage" placeholder="OO대학교">
 					</td>
 					<td align="center">
 						<select id="selectEmail">
@@ -173,7 +203,7 @@
 						<input type="date" name="end">
 					</td>
 					<td align="center">
-						<input type="text" name="start" style="color: #0dc455;" value="(주)이젠 아카데미">
+						<input type="text" name="start" placeholder="(주)이젠 아카데미">
 					</td>
 					<td align="center">
 						<textarea rows="10px" cols="70px" name="contents"></textarea>
