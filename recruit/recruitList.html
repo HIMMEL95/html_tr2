@@ -37,7 +37,7 @@
 					<th width="120px">전공</th>
 					<th width="60px">취미</th>
 				</tr>
-				<tr >
+				<tr onclick=newPage()>
 					<td>
 						<input type="button" id="select1" style="height: 15px; vertical-align: middle;">
 					</td>
@@ -70,6 +70,9 @@
 		function regist() {
 			alert(document.getElementById("id").value + "는 사용가능한 아이디 입니다.");
 			document.getElementById("btnCheck").submit();
+		}
+		function newPage() {
+			window.location.href = './recruitView.html'
 		}
 	</script>
 </body>
