@@ -282,6 +282,8 @@
 		</a>
 	</form>
 	<script type="text/javascript">
+
+		// 데이터 받아오기
 		var appField = sessionStorage.getItem("appField");
 		var name = sessionStorage.getItem("name");
 		var enName = sessionStorage.getItem("enName");
@@ -304,6 +306,7 @@
 		document.getElementById("pay").value = pay;
 		document.getElementById("preview").src = img;
 
+		// 수정 내용 새롭게 view로 보내기
 		function here() {
 			appField = document.getElementById("appField").value;
 			name = document.getElementById("name").value;
