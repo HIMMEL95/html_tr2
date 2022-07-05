@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <html>
 <head>
 	<meta charset="uTF-8">
@@ -15,8 +14,13 @@
 			<p>사이트 운영 > 회원 관리 > 회원 리스트</p>
 		</div>
 		<div>
-			<input type="text" id="input" placeholder="&nbsp;&nbsp;검색어 입력" style="width: 90%; height: 20px; vertical-align: middle;">
-			<input type="button" value="검색" id="search" style="vertical-align: middle; width: 50px; height: 30px;" onclick=searching()>
+			<input type="text" id="input" placeholder="&nbsp;&nbsp;검색어 입력" onkeyup="filter()" style="width: 90%; height: 20px; vertical-align: middle;">
+			<input type="button" value="검색" id="search" style="vertical-align: middle; width: 50px; height: 30px;">
+			<select id="selectCareer" onclick="selectSearch()">
+				<option value="">선택</option>
+				<option value="신입">신입</option>
+				<option value="경력">경력</option>
+			</select>
 		</div>
 		<br>
 		<div>
@@ -65,7 +69,7 @@
 						<span class="contents" id="appField"></span>
 					</td>
 					<td class="listInner">
-						<span class="contents" id="career"></span>
+						<span class="chooseCareer" id="career"></span>
 					</td>
 					<td class="listInner">
 						<span class="contents" id="pay"></span>
@@ -75,6 +79,123 @@
 					</td>
 					<td class="listInner">
 						<span class="contents" id="hobby"></span>
+					</td>
+				</tr>
+				<tr class="info"  onclick=newPage()>
+					<td>
+						<input type="checkbox" id="select1" name="select">
+					</td>
+					<td>1</td>
+					<td class="listInner">
+						<span class="contents">김 대겸</span>
+					</td>
+					<td class="listInner">
+						<span>Kim Daegyum</span>
+					</td>
+					<td class="listInner">
+						<span>1993.02.05</span>
+					</td>
+					<td class="listInner">
+						<span>kim@gmail.com</span>
+					</td>
+					<td class="listInner">
+						<span>010-5132-5645</span>
+					</td>
+					<td class="listInner">
+						<span>서울특별시 강남구</span>
+					</td>
+					<td class="listInner">
+						<span>자동차분야</span>
+					</td>
+					<td class="listInner">
+						<span class="chooseCareer">경력</span>
+					</td>
+					<td class="listInner">
+						<span>5,000만원</span>
+					</td>
+					<td class="listInner">
+						<span>기계자동차과</span>
+					</td>
+					<td class="listInner">
+						<span>볼링</span>
+					</td>
+				</tr>
+				<tr class="info"  onclick=newPage()>
+					<td>
+						<input type="checkbox" id="select1" name="select">
+					</td>
+					<td>1</td>
+					<td class="listInner">
+						<span class="contents">김 홍철</span>
+					</td>
+					<td class="listInner">
+						<span>Kim Hongchul</span>
+					</td>
+					<td class="listInner">
+						<span> 1994.05.15</span>
+					</td>
+					<td class="listInner">
+						<span>hong@naver.com</span>
+					</td>
+					<td class="listInner">
+						<span>010-5487-4613</span>
+					</td>
+					<td class="listInner">
+						<span>경기도 남양주시</span>
+					</td>
+					<td class="listInner">
+						<span>IT 분야</span>
+					</td>
+					<td class="listInner">
+						<span class="chooseCareer">경력</span>
+					</td>
+					<td class="listInner">
+						<span>5,500만원</span>
+					</td>
+					<td class="listInner">
+						<span>소프트웨어공학과</span>
+					</td>
+					<td class="listInner">
+						<span>야구</span>
+					</td>
+				</tr>
+				<tr class="info"  onclick=newPage()>
+					<td>
+						<input type="checkbox" id="select1" name="select">
+					</td>
+					<td>1</td>
+					<td class="listInner">
+						<span class="contents">박 라엘</span>
+					</td>
+					<td class="listInner">
+						<span>Park Lael</span>
+					</td>
+					<td class="listInner">
+						<span>1996.04.20</span>
+					</td>
+					<td class="listInner">
+						<span>lael@gmail.com</span>
+					</td>
+					<td class="listInner">
+						<span>010-7864-1318</span>
+					</td>
+					<td class="listInner">
+						<span>경기도 용인시 처인구</span>
+					</td>
+					<td class="listInner">
+						<span>IT 분야</span>
+					</td>
+					<td class="listInner">
+						<span class="chooseCareer">신입</span>
+					</td>
+					<td class="listInner">
+						<span>전기전자통신공학과</span>
+					</td>
+					<td class="listInner">
+						<span>3,000만원</span>
+					</td>
+					<td class="listInner">
+						<span>수영</span>
 					</td>
 				</tr>
 			</table>
@@ -120,9 +241,38 @@
 		document.getElementById("pay").innerHTML = pay;
 		document.getElementById("hobby").innerHTML = hobby;
 
+		// 검색 기능
 		function filter() {
-			const search = document.getElementById("input").value.toLowerCase();
-			const listInner = document.getElementById("listInner");
+			var value, name, item, i, career;
+
+			value = document.getElementById("input").value.toUpperCase();
+			item = document.getElementsByClassName("info");
+
+			for (i = 0; i < item.length; i++) {
+				name = item[i].getElementsByClassName("contents");
+				if (name[0].innerHTML.toUpperCase().indexOf(value) > -1) {
+					item[i].style.display = "";
+				} else {
+					item[i].style.display = "none";
+				}
+			}
+		}
+
+		function selectSearch() {
+			var value, name, item, i, career;
+
+			value = document.getElementById("input").value.toUpperCase();
+			item = document.getElementsByClassName("info");
+
+			for (i = 0; i < item.length; i++) {
+				career = item[i].getElementsByClassName("chooseCareer");
+				if (career[0].innerHTML == "신입"){
+					item[i].style.display = "";
+				} 
+				else {
+					item[i].style.display = "none";
+				}
+			}
 		}
 	</script>
 </body>
