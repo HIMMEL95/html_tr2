@@ -43,37 +43,37 @@
 						<input type="checkbox" id="select1" name="select">
 					</td>
 					<td>1</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="name"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="enName"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="birth"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="email"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="tel1"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="address"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="appField"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="career"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="pay"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="major"></span>
 					</td>
-					<td>
+					<td class="listInner">
 						<span class="contents" value=" " id="hobby"></span>
 					</td>
 				</tr>
@@ -119,6 +119,11 @@
 		document.getElementById("career").innerHTML = career;
 		document.getElementById("pay").innerHTML = pay;
 		document.getElementById("hobby").innerHTML = hobby;
+
+		function filter() {
+			const search = document.getElementById("input").value.toLowerCase();
+			const listInner = document.getElementById("listInner");
+		}
 	</script>
 </body>
 </html>
