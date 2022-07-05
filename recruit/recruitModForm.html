@@ -89,7 +89,7 @@
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
 				<td width="200px">
-					<input type="text" name="chiName" value="李 하늘">
+					<input type="text" id="chiName" name="chiName" value="李 하늘">
 				</td>
 			</tr>
 			<tr>
@@ -295,6 +295,7 @@
 		var pay = sessionStorage.getItem("pay");
 		var hobby = sessionStorage.getItem("hobby");
 		var img = sessionStorage.getItem("img");
+		var chiName= sessionStorage.getItem("chiName");
 		document.getElementById("appField").value = appField;
 		document.getElementById("name").value = name;
 		document.getElementById("enName").value = enName;
@@ -304,6 +305,7 @@
 		document.getElementById("email").value = email;
 		document.getElementById("birth").value = birth;
 		document.getElementById("pay").value = pay;
+		document.getElementById("chiName").value = chiName;
 		document.getElementById("preview").src = img;
 
 		// 수정 내용 새롭게 view로 보내기
@@ -318,6 +320,7 @@
 			birth = document.getElementById("birth").value;
 			hobby = document.getElementById("hobby").value;
 			pay = document.getElementById("pay").value;
+			chiName = document.getElementById("chiName").value;
 			img = document.getElementById("preview").src;
 			
 			sessionStorage.setItem("appField", appField);
@@ -331,6 +334,7 @@
 			sessionStorage.setItem("hobby", hobby);
 			sessionStorage.setItem("pay", pay);
 			sessionStorage.setItem("img", img);
+			sessionStorage.setItem("chiName", chiName);
 		}
 
 		// 이미지 미리보기

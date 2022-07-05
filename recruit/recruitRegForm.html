@@ -90,7 +90,7 @@
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
 				<td width="200px">
-					<input type="text" name="chiName"> 
+					<input type="text" id="chiName" name="chiName"> 
 				</td>
 			</tr>
 			<tr>
@@ -295,6 +295,7 @@
 			var pay = document.getElementById("pay").value;
 			var career = document.getElementById("career").value;
 			var img = document.getElementById("preview").src;
+			var chiName = document.getElementById("chiName").value;
 			sessionStorage.setItem("appField", appField);
 			sessionStorage.setItem("name", name);
 			sessionStorage.setItem("tel1", tel1);
@@ -307,6 +308,7 @@
 			sessionStorage.setItem("pay", pay);
 			sessionStorage.setItem("career", career);
 			sessionStorage.setItem("img", img);
+			sessionStorage.setItem("chiName", chiName);
 		}
 		// 이미지 미리보기
 		const reader = new FileReader();
