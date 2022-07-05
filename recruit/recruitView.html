@@ -23,12 +23,16 @@
 		<tr>
 			<th width="100px" align="center" bgcolor="#33d3ff">지원분야</th>
 			<td width="100px" align="center">
-				[IT] 차량 데이터 기반 모빌리티 서비스 개발
+				<span id="appField"></span>
 			</td>
 			<th width="100px" align="center" bgcolor="#33d3ff">경력구분</th>
-			<td width="100px" align="center">신입</td>
+			<td width="100px" align="center">
+				<span id="career"></span>
+			</td>
 			<th width="100px" align="center" bgcolor="#33d3ff">희망연봉</th>
-			<td width="100px" align="center">3,000만원</td>
+			<td width="100px" align="center">
+				<span id="pay"></span>
+			</td>
 		</tr>
 	</table>
 	<br>
@@ -39,42 +43,62 @@
 				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwky9cnxiy1SRsIv8YcUWEZWdLJiBIAHXL2A&usqp=CAU" alt="이력서 사진">
 			</td>
 			<th width="70px" align="center" bgcolor="#33d3ff">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
-			<td width="200px">이 하늘</td>
+			<td width="200px">
+				<span id="name"></span>
+			</td>
 			<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
-			<td width="300px">李 하늘</td>
+			<td width="200px">
+				<span>李 하늘</span>
+			</td>
 		</tr>
 		<tr>
 			<!-- <td></td> -->
 			<th align="center" bgcolor="#33d3ff">영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
-			<td>Lee Haneul</td>
+			<td>
+				<span id="enName"></span>
+			</td>
 			<th align="center" bgcolor="#33d3ff">생년월일</th>
-			<td>1995.10.08</td>
+			<td>
+				<span id="birth"></span>
+			</td>
 		</tr>
 		<tr>
 			<!-- <td></td> -->
 			<th align="center" bgcolor="#33d3ff">전화번호</th>
-			<td>010-1234-5678</td>
+			<td>
+				<span id="tel1"></span>
+			</td>
 			<th align="center" bgcolor="#33d3ff">비상연락망</th>
-			<td>010-2345-6789</td>
+			<td>
+				<span id="tel2">010-2345-6789</span>
+			</td>
 		</tr>
 		<tr>
 			<!-- <td></td> -->
 			<th align="center" bgcolor="#33d3ff">전자우편</th>
-			<td>bbluesky7738@gmail.com</td>
+			<td>
+				<span id="email"></span>
+			</td>
 			<th align="center" bgcolor="#33d3ff">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이</th>
-			<td>만 26세</td>
+			<td>
+				<span id="email">만 26세</span>
+			</td>
 		</tr>
 		<tr>
 			<!-- <td></td> -->
 			<th align="center" bgcolor="#33d3ff">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
-			<td colspan="3">경기도 용인시 기흥구</td>
+			<td colspan="3">
+				<span id="address"></span>
+			</td>
 			<!-- <td align="center" bgcolor="#33d3ff"></td>
 			<td></td> -->
 		</tr>
 		<tr>
 			<!-- <td></td> -->
 			<th align="center" bgcolor="#33d3ff">취미생활</th>
-			<td colspan="3">축구</td>
+			<td colspan="3">
+				<span id="hobby"></span>
+			</td>
 			<!-- <td align="center" bgcolor="#33d3ff"></td>
 			<td></td> -->
 		</tr>
@@ -96,7 +120,9 @@
 				<td align="center">2017.03 ~ 2021.02</td>
 				<td align="center">ㅇㅇ대학교</td>
 				<td align="center">졸업</td>
-				<td align="center">ㅇㅇ과</td>
+				<td align="center">
+					<span id="major"></span>
+				</td>
 				<td align="center">서울</td>
 			</tr>
 			<tr>
@@ -197,8 +223,29 @@
 		<img src="./image/modify.PNG" alt="수정">
 	</a>
 	<script type="text/javascript">
-		const appField = document.getElementById("appField").value;
+		var appField = sessionStorage.getItem("appField");
+		var name = sessionStorage.getItem("name");
+		var enName = sessionStorage.getItem("enName");
+		var tel1= sessionStorage.getItem("tel1");
+		var address = sessionStorage.getItem("address");
+		var major = sessionStorage.getItem("major");
+		var email = sessionStorage.getItem("email");
+		var birth = sessionStorage.getItem("birth");
+		var career = sessionStorage.getItem("career");
+		var pay = sessionStorage.getItem("pay");
+		var hobby = sessionStorage.getItem("hobby");
+
 		document.getElementById("appField").innerHTML = appField;
+		document.getElementById("name").innerHTML = name;
+		document.getElementById("enName").innerHTML = enName;
+		document.getElementById("tel1").innerHTML = tel1;
+		document.getElementById("address").innerHTML = address;
+		document.getElementById("major").innerHTML = major;
+		document.getElementById("email").innerHTML = email;
+		document.getElementById("birth").innerHTML = birth;
+		document.getElementById("career").innerHTML = career;
+		document.getElementById("pay").innerHTML = pay;
+		document.getElementById("hobby").innerHTML = hobby;
 	</script>
 </body
 

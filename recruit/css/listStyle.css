@@ -16,6 +16,7 @@ td {
 
 th {
   background-color: #32bcef;
+  font-size: small;
 }
 
 #input {
@@ -28,4 +29,13 @@ th {
 #search {
 	background-color: #a7c7c1;
 	border-radius: 10px;
+}
+
+.info {
+  cursor: pointer;
+}
+
+.contents {
+  text-align: center;
+  font-size: small; 
 }

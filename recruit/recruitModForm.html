@@ -87,7 +87,7 @@
 					<input type="text" id="name" name="name" value="이 하늘">
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
-				<td width="300px">
+				<td width="200px">
 					<input type="text" name="chiName" value="李 하늘">
 				</td>
 			</tr>
@@ -99,7 +99,7 @@
 				</td>
 				<th align="center" bgcolor="#33d3ff">생년월일</th>
 				<td>
-					<input type="text" id="birth" name="birth" value="1995.10.08">
+					<input type="text" id="birth" name="birth" value="1995.10.08" style="float: left;">
 				</td>
 			</tr>
 			<tr>
@@ -110,7 +110,7 @@
 				</td>
 				<th align="center" bgcolor="#33d3ff">비상연락망</th>
 				<td>
-					<input type="text" id="tel1" name="tel1" value="010-2345-6789">
+					<input type="text" id="tel2" name="tel2" value="010-2345-6789">
 				</td>
 			</tr>
 			<tr>
@@ -128,7 +128,7 @@
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
 				<td colspan="3">
-					<input type="text" id="address" name="address" value="경기도 용인시 기흥구">
+					<input type="text" id="address" name="address" value="경기도 용인시 기흥구" style="width: 90%;">
 				</td>
 				<!-- <td align="center" bgcolor="#33d3ff"></td>
 				<td></td> -->
@@ -208,7 +208,8 @@
 						<input type="text" name="start" value="(주)이젠 아카데미">
 					</td>
 					<td align="center">
-						<textarea rows="10px" cols="70px" name="contents" style="white-space: pre;">Open API활용 자바 안드로이드 웹&앱 개발
+						<textarea rows="10px" cols="70px" name="contents">
+							Open API활용 자바 안드로이드 웹&앱 개발
 							:JAVA, JAVASCRIPT, JQUERY, JSP, SPRING, HTML, CSS, GIT,
 							Bootstrap JSTL AJAX POSTMAN AWS TOMCAT, 등을
 							공부하여 자바를 이용한 웹 프로그래밍 역량을 키웠습니다.
@@ -275,10 +276,54 @@
 		<a href="./recruitView.html" style="float: left;">
 			<img src="./image/back.PNG" alt="뒤로">
 		</a>
-		<a href="./recruitView.html" style="float: right;">
+		<a href="./recruitView.html" style="float: right;" onclick=here()>
 			<img src="./image/regist.PNG" alt="등록">
 		</a>
 	</form>
-	
+	<script type="text/javascript">
+		var appField = sessionStorage.getItem("appField");
+		var name = sessionStorage.getItem("name");
+		var enName = sessionStorage.getItem("enName");
+		var tel1= sessionStorage.getItem("tel1");
+		var address = sessionStorage.getItem("address");
+		var major = sessionStorage.getItem("major");
+		var email = sessionStorage.getItem("email");
+		var birth = sessionStorage.getItem("birth");
+		var pay = sessionStorage.getItem("pay");
+		var hobby = sessionStorage.getItem("hobby");
+		document.getElementById("appField").value = appField;
+		document.getElementById("name").value = name;
+		document.getElementById("enName").value = enName;
+		document.getElementById("tel1").value = tel1;
+		document.getElementById("address").value = address;
+		document.getElementById("major").value = major;
+		document.getElementById("email").value = email;
+		document.getElementById("birth").value = birth;
+		document.getElementById("pay").value = pay;
+		document.getElementById("hobby").value = hobby;
+
+		function here() {
+			var appField = document.getElementById("appField").value;
+			var name = document.getElementById("name").value;
+			var tel1= document.getElementById("tel1").value;
+			var enName= document.getElementById("enName").value;
+			var address = document.getElementById("address").value;
+			var major = document.getElementById("major").value;
+			var email = document.getElementById("email").value;
+			var birth = document.getElementById("birth").value;
+			var hobby = document.getElementById("hobby").value;
+			var pay = document.getElementById("pay").value;
+			sessionStorage.setItem("appField", appField);
+			sessionStorage.setItem("name", name);
+			sessionStorage.setItem("tel1", tel1);
+			sessionStorage.setItem("enName", enName);
+			sessionStorage.setItem("address", address);
+			sessionStorage.setItem("major", major);
+			sessionStorage.setItem("email", email);
+			sessionStorage.setItem("birth", birth);
+			sessionStorage.setItem("hobby", hobby);
+			sessionStorage.setItem("pay", pay);
+		}
+	</script>
 </body>
 </html>

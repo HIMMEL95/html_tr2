@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <html>
 <head>
 	<meta charset="uTF-8">
@@ -14,15 +15,15 @@
 			<p>사이트 운영 > 회원 관리 > 회원 리스트</p>
 		</div>
 		<div>
-			<input type="text" id="input" placeholder="검색어 입력" style="width: 90%; height: 20px; vertical-align: middle;">
+			<input type="text" id="input" placeholder="&nbsp;&nbsp;검색어 입력" style="width: 90%; height: 20px; vertical-align: middle;">
 			<input type="button" value="검색" id="search" style="vertical-align: middle; width: 50px; height: 30px;" onclick=searching()>
 		</div>
 		<br>
 		<div>
-			<table width="100%">
+			<table id="list" width="100%">
 				<tr>
 					<th width="10px;">
-						<input type="button" id="selectAll" name="select" style="height: 15px; vertical-align: middle;">
+						<input type="checkbox" id="selectAll" name="select" style="height: 15px; vertical-align: middle;">
 					</th>
 					<th width="30px">번호</th>
 					<th width="70px">이름</th>
@@ -37,22 +38,44 @@
 					<th width="120px">전공</th>
 					<th width="60px">취미</th>
 				</tr>
-				<tr onclick=newPage()>
+				<tr class="info"  onclick=newPage()>
 					<td>
-						<input type="button" id="select1" name="select" style="height: 15px; vertical-align: middle;">
+						<input type="checkbox" id="select1" name="select">
 					</td>
 					<td>1</td>
-					<td>이하늘</td>
-					<td>Lee Hanuel</td>
-					<td>1995.10.08</td>
-					<td>bbluesky7738@gmail.com</td>
-					<td>010-1234-5678</td>
-					<td>경기도 용인시 기흥구</td>
-					<td>[IT] 차량 데이터 기반 모빌리티 서비스 개발</td>
-					<td>신입</td>
-					<td>3,000만원</td>
-					<td>정보통신공학과</td>
-					<td>축구</td>
+					<td>
+						<span class="contents" value=" " id="name"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="enName"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="birth"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="email"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="tel1"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="address"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="appField"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="career"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="pay"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="major"></span>
+					</td>
+					<td>
+						<span class="contents" value=" " id="hobby"></span>
+					</td>
 				</tr>
 			</table>
 			<br>
@@ -71,6 +94,29 @@
 		function newPage() {
 			window.location.href = './recruitView.html'
 		}
+
+		var appField = sessionStorage.getItem("appField");
+		var name = sessionStorage.getItem("name");
+		var enName = sessionStorage.getItem("enName");
+		var tel1= sessionStorage.getItem("tel1");
+		var address = sessionStorage.getItem("address");
+		var major = sessionStorage.getItem("major");
+		var email = sessionStorage.getItem("email");
+		var birth = sessionStorage.getItem("birth");
+		var career = sessionStorage.getItem("career");
+		var pay = sessionStorage.getItem("pay");
+		var hobby = sessionStorage.getItem("hobby");
+		document.getElementById("appField").innerHTML = appField;
+		document.getElementById("name").innerHTML = name;
+		document.getElementById("enName").innerHTML = enName;
+		document.getElementById("tel1").innerHTML = tel1;
+		document.getElementById("address").innerHTML = address;
+		document.getElementById("major").innerHTML = major;
+		document.getElementById("email").innerHTML = email;
+		document.getElementById("birth").innerHTML = birth;
+		document.getElementById("career").innerHTML = career;
+		document.getElementById("pay").innerHTML = pay;
+		document.getElementById("hobby").innerHTML = hobby;
 	</script>
 </body>
 </html>

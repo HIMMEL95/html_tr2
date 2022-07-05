@@ -43,7 +43,7 @@
 </head>
 
 <body>
-	<form method="get" action="./recruitForm.html" id="form" name="form">
+	<form method="get" action="./recruitView.html" id="form" name="form">
 		<h1 align="center">입사지원서</h1>
 		<table width="100%">
 			<tr>
@@ -53,7 +53,7 @@
 				</td>
 				<th width="100px" align="center" bgcolor="#33d3ff">경력구분</th>
 				<td width="100px" align="center">
-					<select id="selectCareer">
+					<select id="career">
 						<option value=""> 선택
 						<option value="신입"> 신입
 						<option value="경력"> 경력
@@ -88,7 +88,7 @@
 					<input type="text" id="name" name="name">
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
-				<td width="300px">
+				<td width="200px">
 					<input type="text" name="chiName">
 				</td>
 			</tr>
@@ -129,7 +129,7 @@
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
 				<td colspan="3">
-					<input type="text" id="address" name="address">
+					<input type="text" id="address" name="address" style="width: 90%;">
 				</td>
 				<!-- <td align="center" bgcolor="#33d3ff"></td>
 				<td></td> -->
@@ -171,7 +171,7 @@
 						<input type="text" name="collage" placeholder="OO대학교">
 					</td>
 					<td align="center">
-						<select id="selectEmail">
+						<select id="final">
 							<option value=""> 선택
 							<option value="졸업"> 졸업
 							<option value="재학"> 재학
@@ -274,12 +274,35 @@
 		</a>
 		<!-- <input type="button" value="취소" style="width: 70px; height: 30px; vertical-align: middle;"> -->
 		<!-- <input type="submit" value="등록" style="float: right;"> -->
-		<a href="./recruitView.html" style="float: right;" onclick="write(appField)">
+		<a href="./recruitView.html" style="float: right;" onclick=here()>
 			<img src="./image/regist.PNG" alt="등록">
 		</a>
 	</form>
-	<!-- <script type="text/javascript">
-		
-	</script> -->
+	<script type="text/javascript">
+		function here() {
+			var appField = document.getElementById("appField").value;
+			var name = document.getElementById("name").value;
+			var tel1= document.getElementById("tel1").value;
+			var enName= document.getElementById("enName").value;
+			var address = document.getElementById("address").value;
+			var major = document.getElementById("major").value;
+			var email = document.getElementById("email").value;
+			var birth = document.getElementById("birth").value;
+			var hobby = document.getElementById("hobby").value;
+			var pay = document.getElementById("pay").value;
+			var career = document.getElementById("career").value;
+			sessionStorage.setItem("appField", appField);
+			sessionStorage.setItem("name", name);
+			sessionStorage.setItem("tel1", tel1);
+			sessionStorage.setItem("enName", enName);
+			sessionStorage.setItem("address", address);
+			sessionStorage.setItem("major", major);
+			sessionStorage.setItem("email", email);
+			sessionStorage.setItem("birth", birth);
+			sessionStorage.setItem("hobby", hobby);
+			sessionStorage.setItem("pay", pay);
+			sessionStorage.setItem("career", career);
+		}
+	</script>
 </body>
 </html>
