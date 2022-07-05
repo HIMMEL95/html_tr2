@@ -48,9 +48,10 @@
 		<table width="100%">
 			<tr>
 				<th width="100px" align="center" bgcolor="#33d3ff">지원분야</th>
-				<td width="100px" align="center"></td>
+				<td width="100px" align="center">
+					<input type="text" id="appField" name="appField" value="[IT] 차량 데이터 기반 모빌리티 서비스 개발">
+				</td>
 				<th width="100px" align="center" bgcolor="#33d3ff">경력구분</th>
-				<td width="100px" align="center">신입</td>
 				<td width="100px" align="center">
 					<select id="selectCareer">
 						<option value=""> 선택
@@ -59,7 +60,9 @@
 					</select>
 				</td>
 				<th width="100px" align="center" bgcolor="#33d3ff">희망연봉</th>
-				<td width="100px" align="center">회사 내규에 따름</td>
+				<td width="100px" align="center">
+					<input type="text" id="pay" name="pay" value="3,000만원">
+				</td>
 			</tr>
 		</table>
 		<br>
@@ -69,10 +72,9 @@
 				<td width="140px" align="center" rowspan="6">
 					<em>
 						<font size="3" color="red">
-							정장차림의 증명사진
-							<br>넣으시면
-							<br>됩니다.단축키
-							<br>ctrl+N+I
+							수정하고 싶은
+							<br>사진을 넣으시면 
+							<br>됩니다.
 						</font>
 					</em>
 					<div class="filebox">
@@ -82,47 +84,51 @@
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
 				<td width="200px">
-					<input type="text" id="name" name="name">
+					<input type="text" id="name" name="name" value="이 하늘">
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
 				<td width="300px">
-					<input type="text" name="chiName">
+					<input type="text" name="chiName" value="李 하늘">
 				</td>
 			</tr>
 			<tr>
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">영&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
 				<td>
-					<input type="text" id="enName" name="enName">
+					<input type="text" id="enName" name="enName" value="Lee Haneul">
 				</td>
 				<th align="center" bgcolor="#33d3ff">생년월일</th>
 				<td>
-					<input type="text" id="birth" name="birth" placeholder="1999.01.01">
+					<input type="text" id="birth" name="birth" value="1995.10.08">
 				</td>
 			</tr>
 			<tr>
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">전화번호</th>
 				<td>
-					<input type="text" id="tel1" name="tel1" placeholder="010-1234-5678">
+					<input type="text" id="tel1" name="tel1" value="010-1234-5678">
 				</td>
 				<th align="center" bgcolor="#33d3ff">비상연락망</th>
-				<td></td>
+				<td>
+					<input type="text" id="tel1" name="tel1" value="010-2345-6789">
+				</td>
 			</tr>
 			<tr>
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">전자우편</th>
 				<td>
-					<input type="text" id="email" name="email">
+					<input type="text" id="email" name="email" value="bbluesky7738@gmail.com">
 				</td>
 				<th align="center" bgcolor="#33d3ff">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이</th>
-				<td></td>
+				<td>
+					<input type="text" id="age" name="age" value="만 26세">
+				</td>
 			</tr>
 			<tr>
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</th>
 				<td colspan="3">
-					<input type="text" id="address" name="address">
+					<input type="text" id="address" name="address" value="경기도 용인시 기흥구">
 				</td>
 				<!-- <td align="center" bgcolor="#33d3ff"></td>
 				<td></td> -->
@@ -131,7 +137,7 @@
 				<!-- <td></td> -->
 				<th align="center" bgcolor="#33d3ff">취미생활</th>
 				<td colspan="3">
-					<input type="text" id="hobby" name="hobby" placeholder="선택사항"> 
+					<input type="text" id="hobby" name="hobby" value="축구"> 
 				</td>
 				<!-- <td align="center" bgcolor="#33d3ff"></td>
 				<td></td> -->
@@ -161,7 +167,7 @@
 						<input type="date" name="end">
 					</td>
 					<td align="center">
-						<input type="text" name="collage" placeholder="OO대학교">
+						<input type="text" name="collage" value="OO대학교">
 					</td>
 					<td align="center">
 						<select id="selectEmail">
@@ -173,10 +179,10 @@
 						</select>
 					</td>
 					<td align="center">
-						<input type="text" id="major" name="major">
+						<input type="text" id="major" name="major" value="정보통신공학과">
 					</td>
 					<td align="center">
-						<input type="text" name="location">
+						<input type="text" name="location" value="서울">
 					</td>
 				</tr>
 			</tbody>
@@ -199,10 +205,14 @@
 						<input type="date" name="end">
 					</td>
 					<td align="center">
-						<input type="text" name="start" placeholder="(주)이젠 아카데미">
+						<input type="text" name="start" value="(주)이젠 아카데미">
 					</td>
 					<td align="center">
-						<textarea rows="10px" cols="70px" name="contents"></textarea>
+						<textarea rows="10px" cols="70px" name="contents" style="white-space: pre;">Open API활용 자바 안드로이드 웹&앱 개발
+							:JAVA, JAVASCRIPT, JQUERY, JSP, SPRING, HTML, CSS, GIT,
+							Bootstrap JSTL AJAX POSTMAN AWS TOMCAT, 등을
+							공부하여 자바를 이용한 웹 프로그래밍 역량을 키웠습니다.
+						</textarea>
 					</td>
 				</tr>
 			</tbody>
@@ -227,8 +237,8 @@
 					<td align="center">
 						<input type="date" name="acquisitionDate">
 					</td>
-					<td align="center"><input type="text" name="grade"></td>
-					<td align="center"><input type="text" name="organ"></td>
+					<td align="center"><input type="text" name="grade" value="워드프로세서 1급"></td>
+					<td align="center"><input type="text" name="organ" value="대한상공회의소"></td>
 					<td align="center"><input type="text" name="level"></td>
 				</tr>
 			</tbody>

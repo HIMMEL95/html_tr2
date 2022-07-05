@@ -43,7 +43,7 @@
 </head>
 
 <body>
-	<form action="recruitView.html" id="form">
+	<form method="get" action="./recruitForm.html" id="form" name="form">
 		<h1 align="center">입사지원서</h1>
 		<table width="100%">
 			<tr>
@@ -61,7 +61,7 @@
 				</td>
 				<th width="100px" align="center" bgcolor="#33d3ff">희망연봉</th>
 				<td width="100px" align="center">
-					<input type="text" id="pay" name="pay">
+					<input type="text" id="pay" name="pay" placeholder="회사 내규에 따름">
 				</td>
 			</tr>
 		</table>
@@ -122,7 +122,7 @@
 				</td>
 				<th align="center" bgcolor="#33d3ff">나&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이</th>
 				<td>
-					<input type="text" name="age">
+					<input type="text" name="age" placeholder="만 26세">
 				</td>
 			</tr>
 			<tr>
@@ -273,12 +273,13 @@
 			<img src="./image/cancle.PNG" alt="취소">
 		</a>
 		<!-- <input type="button" value="취소" style="width: 70px; height: 30px; vertical-align: middle;"> -->
-		<a href="./recruitView.html" style="float: right;">
+		<!-- <input type="submit" value="등록" style="float: right;"> -->
+		<a href="./recruitView.html" style="float: right;" onclick="write(appField)">
 			<img src="./image/regist.PNG" alt="등록">
 		</a>
 	</form>
-	<script type="text/javascript">
-	
-	</script>
+	<!-- <script type="text/javascript">
+		
+	</script> -->
 </body>
 </html>
