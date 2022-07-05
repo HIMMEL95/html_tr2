@@ -308,16 +308,12 @@
 			sessionStorage.setItem("career", career);
 			sessionStorage.setItem("img", img);
 		}
-
 		// 이미지 미리보기
 		const reader = new FileReader();
-
         reader.onload = (readerEvent) => {
             document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
         };
-
         document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
-
             const imgFile = changeEvent.target.files[0];
             reader.readAsDataURL(imgFile);
 			document.getElementById("text").innerHTML = " ";
