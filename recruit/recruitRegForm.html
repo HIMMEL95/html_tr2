@@ -71,7 +71,7 @@
 			<tr>
 				<td width="140px" align="center" rowspan="6">
 					<em>
-						<font size="3" color="red">
+						<font size="3" color="red" id="text">
 							정장차림의 증명사진
 							<br>넣으시면
 							<br>됩니다.단축키
@@ -79,6 +79,7 @@
 						</font>
 					</em>
 					<div class="filebox">
+						<img src="" id="preview" width="150px;">
 						<label for="ex_file">업로드</label>
 						<input type="file" id="ex_file">
 					</div>
@@ -89,7 +90,7 @@
 				</td>
 				<th width="70px" align="center" bgcolor="#33d3ff">한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문</th>
 				<td width="200px">
-					<input type="text" name="chiName">
+					<input type="text" name="chiName"> 
 				</td>
 			</tr>
 			<tr>
@@ -291,6 +292,7 @@
 			var hobby = document.getElementById("hobby").value;
 			var pay = document.getElementById("pay").value;
 			var career = document.getElementById("career").value;
+			var img = document.getElementById("preview").src;
 			sessionStorage.setItem("appField", appField);
 			sessionStorage.setItem("name", name);
 			sessionStorage.setItem("tel1", tel1);
@@ -302,7 +304,22 @@
 			sessionStorage.setItem("hobby", hobby);
 			sessionStorage.setItem("pay", pay);
 			sessionStorage.setItem("career", career);
+			sessionStorage.setItem("img", img);
 		}
+
+		// 이미지 미리보기
+		const reader = new FileReader();
+
+        reader.onload = (readerEvent) => {
+            document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+        };
+
+        document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+
+            const imgFile = changeEvent.target.files[0];
+            reader.readAsDataURL(imgFile);
+			document.getElementById("text").innerHTML = " ";
+        })
 	</script>
 </body>
 </html>

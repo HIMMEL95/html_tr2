@@ -40,7 +40,8 @@
 	<table width="100%">
 		<tr>
 			<td width="140px" align="center" rowspan="6">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwky9cnxiy1SRsIv8YcUWEZWdLJiBIAHXL2A&usqp=CAU" alt="이력서 사진">
+				<!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwky9cnxiy1SRsIv8YcUWEZWdLJiBIAHXL2A&usqp=CAU" alt="이력서 사진"> -->
+				<img src="" id="preview" alt="이력서 사진" width="150px;">
 			</td>
 			<th width="70px" align="center" bgcolor="#33d3ff">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명</th>
 			<td width="200px">
@@ -234,6 +235,7 @@
 		var career = sessionStorage.getItem("career");
 		var pay = sessionStorage.getItem("pay");
 		var hobby = sessionStorage.getItem("hobby");
+		var img = sessionStorage.getItem("img");
 
 		document.getElementById("appField").innerHTML = appField;
 		document.getElementById("name").innerHTML = name;
@@ -246,6 +248,7 @@
 		document.getElementById("career").innerHTML = career;
 		document.getElementById("pay").innerHTML = pay;
 		document.getElementById("hobby").innerHTML = hobby;
+		document.getElementById("preview").src = img;
 	</script>
 </body
 

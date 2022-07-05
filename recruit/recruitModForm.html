@@ -71,13 +71,14 @@
 			<tr>
 				<td width="140px" align="center" rowspan="6">
 					<em>
-						<font size="3" color="red">
+						<font size="3" color="red" id="text">
 							수정하고 싶은
 							<br>사진을 넣으시면 
 							<br>됩니다.
 						</font>
 					</em>
 					<div class="filebox">
+						<img src="" id="preview" width="150px;">
 						<label for="ex_file">업로드</label>
 						<input type="file" id="ex_file">
 					</div>
@@ -291,6 +292,7 @@
 		var birth = sessionStorage.getItem("birth");
 		var pay = sessionStorage.getItem("pay");
 		var hobby = sessionStorage.getItem("hobby");
+		var img = sessionStorage.getItem("img");
 		document.getElementById("appField").value = appField;
 		document.getElementById("name").value = name;
 		document.getElementById("enName").value = enName;
@@ -300,19 +302,21 @@
 		document.getElementById("email").value = email;
 		document.getElementById("birth").value = birth;
 		document.getElementById("pay").value = pay;
-		document.getElementById("hobby").value = hobby;
+		document.getElementById("preview").src = img;
 
 		function here() {
-			var appField = document.getElementById("appField").value;
-			var name = document.getElementById("name").value;
-			var tel1= document.getElementById("tel1").value;
-			var enName= document.getElementById("enName").value;
-			var address = document.getElementById("address").value;
-			var major = document.getElementById("major").value;
-			var email = document.getElementById("email").value;
-			var birth = document.getElementById("birth").value;
-			var hobby = document.getElementById("hobby").value;
-			var pay = document.getElementById("pay").value;
+			appField = document.getElementById("appField").value;
+			name = document.getElementById("name").value;
+			tel1= document.getElementById("tel1").value;
+			enName= document.getElementById("enName").value;
+			address = document.getElementById("address").value;
+			major = document.getElementById("major").value;
+			email = document.getElementById("email").value;
+			birth = document.getElementById("birth").value;
+			hobby = document.getElementById("hobby").value;
+			pay = document.getElementById("pay").value;
+			img = document.getElementById("preview").src;
+			
 			sessionStorage.setItem("appField", appField);
 			sessionStorage.setItem("name", name);
 			sessionStorage.setItem("tel1", tel1);
@@ -323,7 +327,22 @@
 			sessionStorage.setItem("birth", birth);
 			sessionStorage.setItem("hobby", hobby);
 			sessionStorage.setItem("pay", pay);
+			sessionStorage.setItem("img", img);
 		}
+
+		// 이미지 미리보기
+		const reader = new FileReader();
+
+        reader.onload = (readerEvent) => {
+            document.querySelector("#preview").setAttribute("src", readerEvent.target.result);
+        };
+
+        document.querySelector("#ex_file").addEventListener("change", (changeEvent) => {
+
+            const imgFile = changeEvent.target.files[0];
+            reader.readAsDataURL(imgFile);
+			document.getElementById("text").innerHTML = " ";
+        })
 	</script>
 </body>
 </html>

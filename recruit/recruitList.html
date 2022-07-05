@@ -117,6 +117,54 @@
 		document.getElementById("career").innerHTML = career;
 		document.getElementById("pay").innerHTML = pay;
 		document.getElementById("hobby").innerHTML = hobby;
+
+		function tableCreate() {
+			var tc = new Array();
+			var html = '';
+
+			var num = $("#select1").val();
+			var name = $("#name").val();
+			var enName = $("#enName").val();
+			var birth = $("#birth").val();
+			var email = $("#email").val();
+			var tel1 = $("#tel1").val();
+			var address = $("#address").val();
+			var appField = $("#appField").val();
+			var career = $("#career").val();
+			var pay = $("#pay").val();
+			var major = $("#major").val();
+			var hobby = $("#hobby").val();
+
+			html += '<tr>';
+			html += '<td>'+ num + '</td>';
+			html += '<td>'+ name + '</td>';
+			html += '<td>'+ enName + '</td>';
+			html += '<td>'+ birth + '</td>';
+			html += '<td>'+ email + '</td>';
+			html += '<td>'+ tel1 + '</td>';
+			html += '<td>'+ address + '</td>';
+			html += '<td>'+ appField + '</td>';
+			html += '<td>'+ careeer + '</td>';
+			html += '<td>'+ pay + '</td>';
+			html += '<td>'+ major + '</td>';
+			html += '<td>'+ hobby + '</td>';
+			html += '</tr>';
+
+			$("#list").append(html);
+
+			$("#select1").val('');
+			$("#name").val('');
+			$("#enName").val('');
+			$("#birth").val('');
+			$("#email").val('');
+			$("#tel1").val('');
+			$("#address").val('');
+			$("#appField").val('');
+			$("#career").val('');
+			$("#pay").val('');
+			$("#major").val('');
+			$("#hobby").val('');
+		}
 	</script>
 </body>
 </html>
