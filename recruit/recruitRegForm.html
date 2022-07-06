@@ -148,8 +148,8 @@
 		<br>
 		<h4><font size=3>□ 학력사항 (최신이력이 가장 위로)</font></h4>
 		<div style="float: right; margin: 5px;">
-			<input type="button" value="추가" onclick=addRow()>
-			<input type="button" value="삭제" onclick=removeRow()>
+			<input type="button" value="추가" onclick=rowAdd()>
+			<input type="button" value="삭제" onclick=deleteRow(-1)>
 		</div>
 		<table width="100%" id="careerTable">
 			<thead id="careerThead">
@@ -309,7 +309,10 @@
 			sessionStorage.setItem("career", career);
 			sessionStorage.setItem("img", img);
 			sessionStorage.setItem("chiName", chiName);
+
+			alert("등록되었습니다.");
 		}
+
 		// 이미지 미리보기
 		const reader = new FileReader();
         reader.onload = (readerEvent) => {
@@ -320,6 +323,37 @@
             reader.readAsDataURL(imgFile);
 			document.getElementById("text").innerHTML = " ";
         })
+
+		// Row 추가 
+		function rowAdd() {
+			var objRow, objCell_Date, objCell_Sc, objCell_sel, objCell_maj, objCell_loc;
+			objRow = document.all["careerList"].insertRow();
+
+			objCell_Date = objRow.insertCell();
+			objCell_Date.innerHTML = "<input type='date' name='start'>" + "~" + "<input type='date' name='end'>";
+		
+			objCell_Sc = objRow.insertCell();
+			objCell_Sc.innerHTML = "<input type='text' name='collage' value='OO대학교'>";
+
+			objCell_sel = objRow.insertCell();
+			objCell_sel.innerHTML = "<select id='selectEmail'>" + "<option value=''> 선택" + "<option value='졸업'> 졸업" + 
+							"<option value='재학'> 재학" + "<option value='고졸'> 고졸" + "<option value='중퇴'> 중퇴" + "</select>";
+
+			objCell_maj = objRow.insertCell();
+			objCell_maj.innerHTML = "<input type='text' id='major' name='major' value='정보통신공학과'>";
+
+			objCell_loc = objRow.insertCell();
+			objCell_loc.innerHTML = "<input type='text' name='location' value='서울'>";
+		}
+
+		// Row 삭제
+		function deleteRow(rownum) {
+			// table element 찾기
+			const table = document.getElementById('level');
+			
+			// 행(Row) 삭제
+			const newRow = table.deleteRow(rownum);
+		}
 	</script>
 </body>
 </html>

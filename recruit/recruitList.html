@@ -82,7 +82,7 @@
 						<span class="contents" id="hobby"></span>
 					</td>
 				</tr>
-				<tr class="info" onclick=newPage()>
+				<tr class="info">
 					<td onclick="event.cancelBubble=true">
 						<input type="checkbox" id="select1" name="select">
 					</td>
@@ -106,7 +106,7 @@
 						<span>서울특별시 강남구</span>
 					</td>
 					<td class="listInner">
-						<span>자동차분야</span>
+						<span>엔진 개발</span>
 					</td>
 					<td class="listInner">
 						<span class="chooseCareer">경력</span>
@@ -121,7 +121,7 @@
 						<span>축구</span>
 					</td>
 				</tr>
-				<tr class="info" onclick=newPage()>
+				<tr class="info">
 					<td onclick="event.cancelBubble=true">
 						<input type="checkbox" id="select1" name="select">
 					</td>
@@ -145,7 +145,7 @@
 						<span>경기도 남양주시</span>
 					</td>
 					<td class="listInner">
-						<span>IT 분야</span>
+						<span>프론트엔드 개발자</span>
 					</td>
 					<td class="listInner">
 						<span class="chooseCareer">경력</span>
@@ -160,7 +160,7 @@
 						<span>야구</span>
 					</td>
 				</tr>
-				<tr class="info" onclick=newPage()>
+				<tr class="info">
 					<td onclick="event.cancelBubble=true">
 						<input type="checkbox" id="select1" name="select">
 					</td>
@@ -184,7 +184,7 @@
 						<span>경기도 용인시 처인구</span>
 					</td>
 					<td class="listInner">
-						<span>IT 분야</span>
+						<span>백엔드 개발자</span>
 					</td>
 					<td class="listInner">
 						<span class="chooseCareer">신입</span>
@@ -244,7 +244,7 @@
 
 		// 검색 기능
 		function filter() {
-			var value, name, item, i, career;
+			var value, name, item, i;
 
 			value = document.getElementById("input").value.toUpperCase();
 			item = document.getElementsByClassName("info");
