@@ -12,9 +12,8 @@
 		#bbb {
 			background-color: #f3ca8e;
 			float: left;
-			width: 200px;
+			width: 17%;
 			height: 300px;
-			font-size: medium;
 		}
 		#ccc {
 			background-color: #91e1c4;
@@ -30,6 +29,7 @@
 		td {
 			border-bottom: solid;
 			border-width: 1px;
+			font-size: small;
 		}
 		tr {
 			height: 50px;
@@ -59,11 +59,12 @@
 			<li>일정관리</li>
 		</ul>
 	</div>
+	<input type="text" value="add" onkeyup="rowAdd()">
 	<div id="ccc">
-		<table width="83%">
-			<thead style="float: left;">
+		<table width="70%">
+			<thead>
 				<tr>
-					<th colspan="9">회원관리</th>
+					<th colspan="9" style="text-align: left;">회원관리</th>
 					<!-- <td></td>
 					<td></td>
 					<td></td>
@@ -74,7 +75,7 @@
 					<td></td> -->
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="tbody">
 				<tr>
 					<td width="30px;"><input type="checkbox" ></td>
 					<td>번호</td>
@@ -108,11 +109,58 @@
 					<td>2022.02.15</td>
 					<td>Y</td>
 				</tr>
+				<tr>
+					<td><input type="checkbox" ></td>
+					<td><input type='text' name='num' ></td>
+					<td><input type='text' name='num'></td>
+					<td><input type='text' name='num'></td>
+					<td><input type='text' name='num'></td>
+					<td><input type='text' name='num'></td>
+					<td><input type='text' name='num'></td>
+					<td><input type='text' name='num'></td>
+					<td><input type='text' name='num' onkeyup="rowAdd()"></td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
 	<div id="ddd">
 		Copy right. 1234 Himmel Student
 	</div>
+	<script>
+		// Row 추가 
+		function rowAdd() {
+			var objRow, check, num, name, id, grade, ing, in_, recent, fire;
+			objRow = document.all["tbody"].insertRow();
+
+			if(window.event.keyCode == 13) {
+				check = objRow.insertCell();
+				check.innerHTML = "<input type='checkbox' name='num'>";
+
+				num = objRow.insertCell();
+				num.innerHTML = "<input type='text' name='num'>";
+
+				name = objRow.insertCell();
+				name.innerHTML = "<input type='text' name='num'>";
+
+				id = objRow.insertCell();
+				id.innerHTML = "<input type='text' name='num'>";
+
+				grade = objRow.insertCell();
+				grade.innerHTML = "<input type='text' name='num'>";
+
+				ing = objRow.insertCell();
+				ing.innerHTML = "<input type='text' name='num'>";
+
+				in_ = objRow.insertCell();
+				in_.innerHTML = "<input type='text' name='num'>";
+
+				recent = objRow.insertCell();
+				recent.innerHTML = "<input type='text' name='num'>";
+
+				fire = objRow.insertCell();
+				fire.innerHTML = "<input type='text' name='num' onkeyup='rowAdd()'>";
+			}
+		}
+	</script>
 </body>
 </html>
