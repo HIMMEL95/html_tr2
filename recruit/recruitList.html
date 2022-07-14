@@ -244,9 +244,10 @@
 
 		// 검색 기능
 		function filter() {
-			var value, name, item, i;
+			var value, name, item, i, career;
 
 			value = document.getElementById("input").value.toUpperCase();
+			careerValue = document.getElementById("selectCareer").value.toUpperCase();
 			item = document.getElementsByClassName("info");
 
 			for (i = 0; i < item.length; i++) {
