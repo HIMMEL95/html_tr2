@@ -58,7 +58,7 @@
 		                    <button class="btn btn-outline-success" type="submit">Search</button>
 		                </div>
 		                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-		                    <li class="nav-item">
+		                    <li class="nav-item"
 		                        <a class="nav-link active" href="#">로그인</a>
 		                    </li>
 		                </ul>
@@ -68,47 +68,62 @@
 	    </nav>
 	    <!-- 경기 미리보기 -->
 	    
-		<div id="container" role="main">
-			<div id="spot">
-				<div class="home_live_box" style="display:block" id="_section_home_livebox_root">
-					<div class="live_slider">
-						<h2 class="blind">오늘의 경기</h2>
-						<div class="live_card_list new_scroll" id="_section_home_live_scroll_holder" style="touch-action: none;">
-							<div class="scroller" id="_section_home_live_scroll" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
-								
-								<div class="card bg-dark text-white" style="width: 280px;">
-									<div class="live_box_card type_live card-img-overlay">
-										<div class="category">퓨처스 올스타전 (올스타 프라이데이)</div>
-										<div class="image_area">
-											<span class="image"><img class="card-img" src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/8767568/live/3480607/record/16727989/thumbnail/image_1080.jpg" alt="" width="246" height="132" onerror="imageOnError(this);"></span>
-											<span class="common_live_tag"><span class="blind">LIVE</span></span>
-											<span class="live_viewer"><span class="number">278,106</span> 시청</span>
-										</div>
-										<div class="general_info card-text">
-											<div class="match_title">북부 vs 남부 - 퓨처스 올스타전 (올스타 프라이데이)</div>
-											<div class="match_press">
-												<span class="league">퓨처스 올스타전 (올스타 프라이데이)</span>
-											</div>
-										</div>
-										<a href="/game/20220715KBO1" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
-									</div>
-								</div>
-								<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-								<div class="card bg-dark text-white position-relative" style="max-width: 246px; font-size: 12px;">
-									<div class="image_area">
-										<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/8767568/live/3480607/record/16727989/thumbnail/image_1080.jpg" class="card-img" alt="...">
-									</div>
-									<div class="card-img-overlay">
-										<div class="position-absolute top-0 start-0 p-2">
-											<span class="common_live_tag"><span class="blind bg-danger">LIVE</span></span>
-											<span class="live_viewer"><span class="number">278,106</span> 시청</span>
-										</div>
-										<div class="match_press card-text position-absolute bottom-0 start- 0 p-1">
-											<h6 class="card-title">북부 vs 남부 - 퓨처스 올스타전 (올스타 프라이데이)</h6>
-											<span class="league">퓨처스 올스타전 (올스타 프라이데이)</span>
-										</div>
-									</div>
-								  </div>
+		<div id="container" role="main" class="pt-5 m-3">
+			<div class="card bg-dark text-white position-relative m-3" style="max-width: 246px; font-size: 12px; float: left;">
+				<div class="image_area">
+					<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177418/live/3471320/record/16763621/thumbnail/image_1080.jpg" class="card-img" alt="...">
+				</div>
+				<div class="card-img-overlay">
+					<div class="card-text position-absolute top-0 start-0 m-2">
+						<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+						<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+					</div>
+					<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+						<p class="card-title fw-bold" style="font-size: 13px;">하나카드 PBA/LPBA 챔피언십 테이블1</p>
+						<span class="league">당구</span>
+					</div>
+					<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+				</div>
+				</div>
+			</div>
+			
+			<div class="card bg-dark text-white position-relative" style="max-width: 246px; font-size: 12px; float: left;">
+				<div class="image_area">
+					<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177418/live/3471320/record/16763621/thumbnail/image_1080.jpg" class="card-img" alt="...">
+				</div>
+				<div class="card-img-overlay">
+					<div class="card-text position-absolute top-0 start-0 m-2">
+						<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+						<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+					</div>
+					<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+						<p class="card-title fw-bold" style="font-size: 13px;">하나카드 PBA/LPBA 챔피언십 테이블1</p>
+						<span class="league">당구</span>
+					</div>
+					<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+				</div>
+				</div>
+			</div>
+
+			<div class="card bg-dark text-white position-relative" style="max-width: 246px; font-size: 12px; float: left;">
+				<div class="image_area">
+					<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177418/live/3471320/record/16763621/thumbnail/image_1080.jpg" class="card-img" alt="...">
+				</div>
+				<div class="card-img-overlay">
+					<div class="card-text position-absolute top-0 start-0 m-2">
+						<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+						<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+					</div>
+					<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+						<p class="card-title fw-bold" style="font-size: 13px;">하나카드 PBA/LPBA 챔피언십 테이블1</p>
+						<span class="league">당구</span>
+					</div>
+					<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+				</div>
+				</div>
+			</div>
+			
+
 								<!-- <div class="live_box_card type_live">
 									<div class="category">당구</div>
 									<div class="image_area">
