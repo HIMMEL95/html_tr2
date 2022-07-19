@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-07-19T00:46:39.231Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="WSDERDerZgNPerBVn2TA" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-19T00:48:48.860Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="HOTAu8l_zBebBS3AU7RK" version="20.0.4" type="github">
   <diagram id="z-WIZhmsR8eHMmmbYmnl" name="Page-1">
-    <mxGraphModel dx="1430" dy="3440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="553" dy="1302" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -17,7 +17,7 @@
           <mxGeometry y="60" width="90" height="26" as="geometry" />
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-49" value="비로그인" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="910" y="-100" width="160" height="146" as="geometry" />
+          <mxGeometry x="910" y="-100" width="160" height="176" as="geometry" />
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-50" value="경기 기록 접근 가능" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-49">
           <mxGeometry y="26" width="160" height="30" as="geometry" />
@@ -31,8 +31,11 @@
         <mxCell id="DHVbr6--1tinv_JmC_Sy-54" value="Offcanvas 야구 탭 접근 가능" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-49">
           <mxGeometry y="116" width="160" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="DHVbr6--1tinv_JmC_Sy-123" value="검색 기능 사용" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-49">
+          <mxGeometry y="146" width="160" height="30" as="geometry" />
+        </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-61" value="로그인" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="910" y="131" width="220" height="206" as="geometry" />
+          <mxGeometry x="910" y="131" width="220" height="236" as="geometry" />
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-62" value="경기 기록 접근 가능" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-61">
           <mxGeometry y="26" width="220" height="30" as="geometry" />
@@ -51,6 +54,9 @@
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-68" value="개인정보 관리" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-61">
           <mxGeometry y="176" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DHVbr6--1tinv_JmC_Sy-124" value="검색 기능 사용" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-61">
+          <mxGeometry y="206" width="220" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-69" value="사용 유형" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
           <mxGeometry x="549" y="140" width="90" height="86" as="geometry" />
