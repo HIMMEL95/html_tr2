@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SPOPIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <!-- start -->
+    
+    <!-- 상단 Navbar -->
+	<form action="#" method="get" id="form">
+	    <nav class="navbar sticky-top mb-2" style="background-color: #2565d0;">
+	        <div class="container-fluid">
+	            <a class="navbar-brand" href="#" style="color: white;"><i><strong>SPOPIA</strong></i></a>
+	            <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+	                <span class="navbar-toggler-icon"></span>
+	            </button>
+	            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+	                <div class="offcanvas-header" style="background-color: #2565d0;">
+		                <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel"><i><strong>SPOPIA</strong></i></h5>
+		                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	            	</div>
+		            <div class="offcanvas-body "> 
+		                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+		                   	<li class="nav-item">
+	                            <a class="nav-link active" href="./memberModForm.html">
+									<img src="../../../html_tr2/recruit/image/diano.jpg" class="rounded-circle" alt="" style="width: 40px;">
+	                               	<span class="ps-2"><strong>이하늘</strong></span>
+	                            </a>
+	                        </li>
+	                        <li class="nav-item">
+	                            <a class="nav-link active disabled" href="#">로그아웃</a>
+	                        </li>
+	                        <hr>
+		                    <li class="nav-item dropdown">
+		                        <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		                        축구
+		                        </a>
+		                        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+		                            <li><a class="dropdown-item" href="#">축구</a></li>
+		                            <li><a class="dropdown-item" href="#">해외 축구</a></li>
+		                        </ul>
+		                    </li>
+		                    <li class="nav-item dropdown mb-2">
+		                        <a class="nav-link dropdown-toggle active" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		                        야구
+		                        </a>
+		                        <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+		                            <li><a class="dropdown-item" href="#">야구</a></li>
+		                            <li><a class="dropdown-item" href="#">해외 야구</a></li>
+		                        </ul>
+		                    </li>
+		                </ul>
+		                <div class="d-flex mb-2" role="search">
+		                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+		                    <button class="btn btn-outline-success" type="submit">Search</button>
+		                </div>
+		                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+		                    <li class="nav-item">
+		                        <a class="nav-link active" href="#">로그인</a>
+		                    </li>
+		                </ul>
+	               	</div>
+	            </div>
+	        </div>
+	    </nav>
+	    <!-- 경기 미리보기 -->
+	    
+		<div class="container-fluid">
+			<div></div>
+			<div class="rounded p-3 d-flex flex-row" style="background-color: #BBB2BC;">
+				<div class="card bg-dark text-white position-relative shadow-lg bg-body me-3" style="max-width: 250px; font-size: 12px;">
+					<div class="image_area">
+						<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3477088/record/16777441/thumbnail/image_1080.jpg" class="card-img" alt="...">
+					</div>
+					<div class="card-img-overlay">
+						<div class="card-text position-absolute top-0 start-0 m-2">
+							<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+							<span class="live_viewer bg-dark"><span class="number">751</span> 시청</span>
+						</div>
+						<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+							<p class="card-title fw-bold" style="font-size: 13px;">2022 대한항공배 전국대학배구</p>
+							<span class="league">2022 대한항공배 전국대학배구</span>
+						</div>
+						<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+					</div>
+				</div>
+				
+				<div class="card bg-dark text-white position-relative shadow-lg bg-body me-3" style="max-width: 250px; font-size: 13px;">
+					<div class="image_area">
+						<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3477088/record/16777441/thumbnail/image_1080.jpg" class="card-img" alt="...">
+					</div>
+					<div class="card-img-overlay">
+						<div class="card-text position-absolute top-0 start-0 m-2">
+							<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+							<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+						</div>
+						<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+							<p class="card-title fw-bold">하나카드 PBA/LPBA 챔피언십 테이블1</p>
+							<span class="league">당구</span>
+						</div>
+						<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+					</div>
+				</div>
+				
+				<div class="card bg-dark text-white position-relative shadow-lg bg-body me-3" style="max-width: 250px; font-size: 13px;">
+					<div class="image_area">
+						<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177418/live/3471320/record/16763621/thumbnail/image_1080.jpg" class="card-img" alt="...">
+					</div>
+					<div class="card-img-overlay">
+						<div class="card-text position-absolute top-0 start-0 m-2">
+							<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+							<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+						</div>
+						<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+							<p class="card-title fw-bold">하나카드 PBA/LPBA 챔피언십 테이블1</p>
+							<span class="league">당구</span>
+						</div>
+						<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
+					</div>
+				</div>
+			</div>
+			
+			<button type="button" class="button_prev" style="display: none; left: -52px; transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s;">
+				<span class="blind">이전</span>
+				<span class="page">0</span>
+			</button>
+			<button type="button" class="button_next" style="right: -52px; transition: all 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s; display: none;">
+				<span class="blind">다음</span>
+				<span class="page">0</span>
+			</button>
+		</div>
+    </form>
+    <!-- end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
