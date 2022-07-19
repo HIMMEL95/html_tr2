@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-07-19T00:48:48.860Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="HOTAu8l_zBebBS3AU7RK" version="20.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-07-19T01:04:40.279Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="oEwTKuclhJFq-zYNSyFY" version="20.0.4" type="github">
   <diagram id="z-WIZhmsR8eHMmmbYmnl" name="Page-1">
     <mxGraphModel dx="553" dy="1302" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -94,7 +94,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-81" value="게시물 댓글 관리" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1261" width="160" height="176" as="geometry" />
+          <mxGeometry x="1261" width="160" height="146" as="geometry" />
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-82" value="댓글 추가" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-81">
           <mxGeometry y="26" width="160" height="30" as="geometry" />
@@ -107,9 +107,6 @@
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-90" value="좋아요" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-81">
           <mxGeometry y="116" width="160" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="DHVbr6--1tinv_JmC_Sy-89" value="댓글 삭제" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="DHVbr6--1tinv_JmC_Sy-81">
-          <mxGeometry y="146" width="160" height="30" as="geometry" />
         </mxCell>
         <mxCell id="DHVbr6--1tinv_JmC_Sy-92" value="개인정보 관리" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="1261" y="204" width="160" height="86" as="geometry" />
