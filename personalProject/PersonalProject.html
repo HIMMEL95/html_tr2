@@ -84,61 +84,68 @@
 	            </div>
 	        </div>
 	    </nav>
-	    <!-- 경기 기록보기 -->
-		<div class="container-fluid">
-			<div class="rounded ms-3 me-3 mt-3 mb-4 p-3 d-flex flex-row" style="background-color: #BBB2BC;">
-				<div class="card bg-dark text-white position-relative shadow-lg bg-body me-3" style="max-width: 250px; font-size: 12px;">
-					<div class="image_area">
-						<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3477088/record/16777441/thumbnail/image_1080.jpg" class="card-img" alt="...">
-					</div>
-					<div class="card-img-overlay">
-						<div class="card-text position-absolute top-0 start-0 m-2">
-							<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
-							<span class="live_viewer bg-dark"><span class="number">751</span> 시청</span>
+		<div class="container-fluid" role="main">
+	
+			<!-- 경기 기록보기 -->
+			<div class="rounded ms-3 me-3 mt-3 mb-4 p-3 d-flex flex-row shadow carousel slide" style="background-color: #EDF0F6;" onclick="newPage()">
+				
+				<div class="card position-relative shadow bg-body me-3 carousel-item active live_box_card" style="max-width: 250px; font-size: 12px;">
+					<a href="https://m.sports.naver.com/game/20220722VOLLEYBALL1" class="link_live text-white" aria-label="새창">
+						<div class="image_area">
+							<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3477088/record/16777441/thumbnail/image_1080.jpg" class="card-img" alt="...">
 						</div>
-						<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
-							<p class="card-title fw-bold" style="font-size: 13px;">2022 대한항공배 전국대학배구</p>
-							<span class="league">2022 대한항공배 전국대학배구</span>
+						<div class="card-img-overlay general_info">
+							<div class="card-text position-absolute top-0 start-0 m-2">
+								<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+								<span class="live_viewer bg-dark"><span class="number">751</span> 시청</span>
+							</div>
+							<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+								<p class="card-title match_title fw-bold" style="font-size: 13px;">2022 대한항공배 전국대학배구</p>
+								<span class="league match_press">2022 대한항공배 전국대학배구</span>
+							</div>
 						</div>
-						<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
-					</div>
+					</a>
 				</div>
-				<div class="card bg-dark text-white position-relative shadow-lg bg-body me-3" style="max-width: 250px; font-size: 13px;">
-					<div class="image_area">
-						<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177549/live/3477088/record/16777441/thumbnail/image_1080.jpg" class="card-img" alt="...">
-					</div>
-					<div class="card-img-overlay">
-						<div class="card-text position-absolute top-0 start-0 m-2">
-							<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
-							<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+				
+				<div class="card position-relative shadow bg-body me-3 carousel-item active live_box_card" style="max-width: 250px; font-size: 13px;">
+					<a href="https://m.sports.naver.com/game/20220722SPOBB1" class="link_live text-white" id="url" aria-label="새창">
+						<div class="image_area">
+							<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9751731/live/3480910/record/16854693/thumbnail/image_1080.jpg" class="card-img" alt="...">
 						</div>
-						<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
-							<p class="card-title fw-bold">하나카드 PBA/LPBA 챔피언십 테이블1</p>
-							<span class="league">당구</span>
+						<div class="card-img-overlay">
+							<div class="card-text position-absolute top-0 start-0 m-2">
+								<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+								<span class="live_viewer bg-dark"><span class="number">10,852</span>시청</span>
+							</div>
+							<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+								<p class="card-title fw-bold">충암고 vs 세광고 - 제77회 청룡기(SPOTV 고교야구 시리즈)</p>
+								<span class="league">제77회 청룡기</span>
+							</div>
 						</div>
-						<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
-					</div>
+					</a>
 				</div>
-				<div class="card bg-dark text-white position-relative shadow-lg bg-body me-3" style="max-width: 250px; font-size: 13px;">
-					<div class="image_area">
-						<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177418/live/3471320/record/16763621/thumbnail/image_1080.jpg" class="card-img" alt="...">
-					</div>
-					<div class="card-img-overlay">
-						<div class="card-text position-absolute top-0 start-0 m-2">
-							<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
-							<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+				
+				<div class="card position-relative shadow bg-body me-3 carousel-item active live_box_card" style="max-width: 250px; font-size: 13px;">
+					<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live text-white" aria-label="새창">
+						<div class="image_area">
+							<img src="https://livecloud-thumb.akamaized.net/sports/livecloud/KR/stream/9177418/live/3471320/record/16763621/thumbnail/image_1080.jpg" class="card-img" alt="...">
 						</div>
-						<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
-							<p class="card-title fw-bold">하나카드 PBA/LPBA 챔피언십 테이블1</p>
-							<span class="league">당구</span>
+						<div class="card-img-overlay">
+							<div class="card-text position-absolute top-0 start-0 m-2">
+								<span class="common_live_tag"><span class="bg-danger rounded">LIVE</span></span>
+								<span class="live_viewer bg-dark"><span class="number">89,668</span> 시청</span>
+							</div>
+							<div class="match_press card-text position-absolute bottom-0 start-0 ps-1 m-2">
+								<p class="card-title fw-bold">하나카드 PBA/LPBA 챔피언십 테이블1</p>
+								<span class="league">당구</span>
+							</div>
 						</div>
-						<a href="https://m.sports.naver.com/game/20220717PBA2" class="link_live" aria-label="새창" onclick="clickcr(this, 'lbx.match', '', '', event);"><span class="blind">영상 보기</span></a>
-					</div>
+					</a>
 				</div>
 			</div>
 
 			<!-- 하단 게시물 영역-->
-			<a class="contents" href="../recruit/recruitView.html">
+			<a class="contents" href="https://sports.news.naver.com/news?oid=109&aid=0004660229">
 				<div class="m-3 shadow-lg rounded-4 border">
 					<div class="row g-0" style="max-height: 120px;">
 						<div class="col-md-4" style="max-width: 170px;">
